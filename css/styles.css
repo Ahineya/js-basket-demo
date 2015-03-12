@@ -23,6 +23,10 @@ body {
     border-radius:3px;
 }
 
+.basket-container {
+    border: 1px solid gray;
+}
+
 button {
     position: relative;
     border: none;
