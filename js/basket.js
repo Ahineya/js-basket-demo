@@ -33,28 +33,7 @@
                     tpl.querySelector('.product-name').innerHTML = product.name;
                     tpl.querySelector('.product-quantity').value = 1;
 
-                    tpl.querySelector('.product-delete').addEventListener('click', function() {
-
-                        self.products = self.products.filter(function(basketProduct) {
-                            if (product.id === basketProduct.id) {
-                                basketProduct.view.remove();
-                            }
-                            return product.id !== basketProduct.id;
-                        });
-
-                        console.log(self.products);
-                    });
-
-                    tpl.querySelector('.product-quantity').addEventListener('input', function() {
-                        var input = this;
-                        self.products.forEach(function(basketProduct) {
-                            if (product.id === basketProduct.id) {
-                                basketProduct.count = +input.value;
-                            }
-                        });
-
-                        console.log(self.products);
-                    });
+                    addBasketListeners(tpl, product);
 
                     self.basket.appendChild(tpl);
 
@@ -82,6 +61,30 @@
             this.subscribe('app/basket/toggle', function() {
                 self.basket.classList.toggle('hidden')
             });
+
+            function addBasketListeners(tpl, product) {
+                tpl.querySelector('.product-delete').addEventListener('click', function() {
+                    self.products = self.products.filter(function(basketProduct) {
+                        if (product.id === basketProduct.id) {
+                            basketProduct.view.remove();
+                        }
+                        return product.id !== basketProduct.id;
+                    });
+
+                    console.log(self.products);
+                });
+
+                tpl.querySelector('.product-quantity').addEventListener('input', function() {
+                    var input = this;
+                    self.products.forEach(function(basketProduct) {
+                        if (product.id === basketProduct.id) {
+                            basketProduct.count = +input.value;
+                        }
+                    });
+
+                    console.log(self.products);
+                });
+            }
 
         }
 
