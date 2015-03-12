@@ -1,0 +1,40 @@
+body {
+    background:#d5d5d5;
+    font-family: Roboto, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+#products .product {
+    display: inline-block;
+
+    padding:1.5rem;
+    box-shadow:0 1px 2px #aaa;
+    background:white;
+    margin:0 1rem 1rem;
+    border-radius:3px;
+}
+
+#basket .product {
+    display: inline-block;
+
+    padding:1.5rem;
+    box-shadow:0 1px 2px #aaa;
+    background:white;
+    margin:0 1rem 1rem;
+    border-radius:3px;
+}
+
+button {
+    position: relative;
+    border: none;
+    outline:none;
+    cursor: pointer;
+    background: #89669b;
+    color: white;
+    padding: 5px 5px;
+    border-radius: 2px;
+    font-size: 18px;
+}
+
+.hidden {
+    display: none;
+}

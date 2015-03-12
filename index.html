@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Demo basket</title>
+    <link rel="stylesheet" href="css/styles.css"/>
+    <script src="js/pubsub.js"></script>
+    <script src="js/API.js"></script>
+    <script src="js/products.js"></script>
+    <script src="js/basket.js"></script>
+    <script src="js/app.js"></script>
+</head>
+<body>
+
+    <template id="product">
+        <div class="product">
+            <img src="" alt=""/>
+            <p class="product-name"></p>
+            <p class="product-description"></p>
+            <button class="product-add">To basket</button>
+        </div>
+    </template>
+
+    <template id="basketItem">
+        <div class="product">
+            <img src="" alt=""/>
+            <p class="product-name"></p>
+            <input class="product-quantity" type="number"/>
+            <button class="product-delete">Delete</button>
+        </div>
+    </template>
+
+    <div id="products"></div>
+    <div id="basket">
+        <button class="basket-toggle">Toggle basket</button>
+        <div class="basket-container hidden">
+            <button class="checkout">Checkout</button>
+        </div>
+    </div>
+
+</body>
+</html>
