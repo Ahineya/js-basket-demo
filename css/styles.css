@@ -24,7 +24,14 @@ body {
 }
 
 .basket-container {
-    border: 1px solid gray;
+    border-left: 1px solid gray;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    overflow-y: auto;
+    width: 280px;
+    padding-bottom: 30px;
 }
 
 button {
@@ -41,4 +48,11 @@ button {
 
 .hidden {
     display: none;
+}
+
+.checkout {
+    position: fixed;
+    bottom:0;
+    right: 0;
+    width:280px;
 }
