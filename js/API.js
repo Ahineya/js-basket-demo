@@ -3,9 +3,6 @@
 
         function API() {
 
-            var self = this;
-
-            window.modules.pubsub.applyTo(this);
             var products = [
                 {
                     id: 1,
@@ -25,23 +22,8 @@
                 }
             ];
 
-            this.subscribe('app/start', function() {
-                _getProducts();
-            });
-
-            this.subscribe('API/checkout', function(products) {
-                console.log(products);
-            });
-
-            function _getProducts() {
-                setTimeout(function() {
-                    self.publish('app/products:received', products);
-                }, 1000);
-            }
         }
 
-        window.modules = window.modules || {};
-        window.modules.API = new API();
     });
 
 })();
